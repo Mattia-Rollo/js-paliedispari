@@ -6,7 +6,7 @@ function palidroma(parola) {
     let parolaReverse = arrayParolaReverse.join('');
     console.log(parola,arrayParola,arrayParolaReverse, parolaReverse);
     if (parolaReverse === parola) {
-        return wrapper.innerHTML = "palidroma";
+        return wrapper.append('palidroma');
     }
 
 
@@ -14,4 +14,12 @@ function palidroma(parola) {
 
 function numeroRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+  function isEven(num) {
+   if (num % 2 == 0) {
+    return true;
+   }else {
+    return false;
+   }
   }

@@ -35,10 +35,10 @@ btn.addEventListener('click', function() {
     let somma = numeroInserito + numeroComputer;
     console.log(numeroInserito + ' + ' + numeroComputer + ' = ' + somma)
 
-  if((somma % 2 == 0 && scieltaUtente === 'pari') || (somma % 2 == 1 && scieltaUtente === 'dispari')) {
+  if((isEven(somma) && scieltaUtente === 'pari') || (isEven(!somma) && scieltaUtente === 'dispari')) {
     console.log('hai vinto');
   } else {
     console.log('hai perso');
-  }
+  }ISe
 
 })
