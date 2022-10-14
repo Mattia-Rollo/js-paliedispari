@@ -26,8 +26,8 @@ const numeroUtente = document.getElementById('numero-utente');
 
 btn.addEventListener('click', function() {
     let numeroInserito = parseInt(numeroUtente.value);
-    let option = selection.value;
-    console.log(option,numeroInserito);
+    let scieltaUtente = selection.value;
+    console.log(scieltaUtente,numeroInserito);
 
     let numeroComputer = numeroRandom(1,5);
     console.log(numeroComputer); 
@@ -35,7 +35,7 @@ btn.addEventListener('click', function() {
     let somma = numeroInserito + numeroComputer;
     console.log(somma)
 
-  if(somma % 2 == 0 && option === 'pari') {
+  if((somma % 2 == 0 && scieltaUtente === 'pari') || (somma % 2 == 1 && scieltaUtente === 'dispari')) {
     console.log('hai vinto');
   } else {
     console.log('hai perso');
