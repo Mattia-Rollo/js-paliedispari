@@ -33,7 +33,7 @@ btn.addEventListener('click', function() {
     console.log(numeroComputer); 
 
     let somma = numeroInserito + numeroComputer;
-    console.log(somma)
+    console.log(numeroInserito + ' + ' + numeroComputer + ' = ' + somma)
 
   if((somma % 2 == 0 && scieltaUtente === 'pari') || (somma % 2 == 1 && scieltaUtente === 'dispari')) {
     console.log('hai vinto');

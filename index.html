@@ -14,12 +14,12 @@
 <body>
     <div class="container-md my-5">
         <div class="row">
-            <div class="col">
+            <div class="col-4">
             
                 <input type="text">
                 
             </div>
-            <div class="col">
+            <div class="col-2">
                 <div class="wrapper"></div>
             </div>
         </div>
@@ -30,12 +30,12 @@
             
                 <label for="cars">Sciegli pari o dispari</label>
 
-                <select id="pari-dispari">
+                <select id="pari-dispari" class="form-select" aria-label="Default select example">
                     <option value="pari">pari</option>
                     <option value="dispari">dispari</option>
                 </select>
                 <label for="numero-utente">Inserisci un numero da 1 a 5</label>
-                <input type="number" id="numero-utente">
+                <input type="number" id="numero-utente" min="1" max="5">
                 <button class="btn btn-info">Invia</button>
                 
             </div>
