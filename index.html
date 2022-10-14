@@ -12,35 +12,36 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-md my-5">
-        <div class="row">
-            <div class="col-4">
-            
+    <div class="container-md py-3 text-center bg-light">
+        <div class="row bg-info py-3">
+            <h4>Inserisci una parola</h4>
+            <div class="col-4 offset-3">
                 <input type="text">
                 
             </div>
-            <div class="col-2">
-                <span>QUI SCRIVO SE è PALINDROMA</span><div class="wrapper"></div>
+            <div class="col-2 ">
+                <!-- <span>QUI SCRIVO SE è PALINDROMA</span> -->
+                <div class="wrapper"></div>
             </div>
         </div>
     </div>
-    <div class="container-md my-5">
-        <div class="row">
-            <div class="col">
+    <div class="container-md bg-secondary text-center">
+        <div class="row justify-content-center py-3">
+            <div class="col-6 bg-white">
             
-                <label for="cars">Sciegli pari o dispari</label>
+                <label for="pari-dispari">Sciegli pari o dispari</label>
 
-                <select id="pari-dispari" class="form-select" aria-label="Default select example">
+                <select id="pari-dispari" class="form-select my-3" aria-label="Default select example">
                     <option value="pari">pari</option>
                     <option value="dispari">dispari</option>
                 </select>
                 <label for="numero-utente">Inserisci un numero da 1 a 5</label>
-                <input type="number" id="numero-utente" min="1" max="5">
+                <input type="number" id="numero-utente" min="1" max="5" class="mb-3">
                 <button class="btn btn-info">Invia</button>
                 
             </div>
-            <div class="col">
-                <div class="risultato"></div>
+            <div class="col bg-gradient d-flex">
+                <div id="risultato" class="m-auto fs-2 txt-bg"></div>
             </div>
         </div>
     </div>

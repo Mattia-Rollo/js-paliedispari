@@ -6,8 +6,12 @@ const wrapper = document.getElementsByClassName('wrapper')[0];
 
 inputUtente.addEventListener('change', function() {
     const text = inputUtente.value;
-    wrapper.innerHTML = text;
-    palidroma(text);
+    // wrapper.innerHTML = text;
+    if(palidroma(text)) {
+      wrapper.innerHTML = 'palindromo';
+    }else {
+      wrapper.innerHTML = text;
+    }
 
 
 })
@@ -23,6 +27,7 @@ inputUtente.addEventListener('change', function() {
 const btn = document.getElementsByTagName('button')[0];
 const selection = document.getElementsByTagName('select')[0];
 const numeroUtente = document.getElementById('numero-utente');
+const risultato = document.getElementById('risultato');
 
 btn.addEventListener('click', function() {
     let numeroInserito = parseInt(numeroUtente.value);
@@ -37,8 +42,11 @@ btn.addEventListener('click', function() {
 
   if((isEven(somma) && scieltaUtente === 'pari') || (isEven(!somma) && scieltaUtente === 'dispari')) {
     console.log('hai vinto');
+    risultato.innerHTML = '<span class="text-bg-success">hai vinto</span>';
   } else {
     console.log('hai perso');
-  }ISe
+    risultato.innerHTML = '<span class="text-bg-danger">hai perso</span>';
+
+  }
 
 })

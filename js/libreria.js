@@ -6,7 +6,7 @@ function palidroma(parola) {
     let parolaReverse = arrayParolaReverse.join('');
     console.log(parola,arrayParola,arrayParolaReverse, parolaReverse);
     if (parolaReverse === parola) {
-        return wrapper.append('palidroma');
+        return true;
     }
 
 
