@@ -41,26 +41,20 @@ btn.addEventListener('click', function() {
 
     let somma = numeroInserito + numeroComputer;
     console.log(numeroInserito + ' + ' + numeroComputer + ' = ' + somma)
-    let check = false;
-  if(isEven(somma) && (scieltaUtente === "pari")){
-    check = true;
-  }
-  else if (!(isEven(somma)) && (scieltaUtente === "dispari")) {
-    check = true;
-  } else {
-    check = false;
-  }
-  
-  
-  console.log(!(isEven(somma)),scieltaUtente);
-  
-  if (check){
+    // let check = false;
+  if(isEven(somma) && (scieltaUtente === "pari") || (!(!isEven(somma)) && (scieltaUtente === "dispari"))){
     console.log('hai vinto');
     risultato.innerHTML = '<span class="text-bg-success">hai vinto</span>';
-  } else {
+  }
+  else {
     console.log('hai perso');
     risultato.innerHTML = '<span class="text-bg-danger">hai perso</span>';
 
   }
+
+  
+  
+  console.log(isEven(!somma),scieltaUtente);
+  
 
 })
