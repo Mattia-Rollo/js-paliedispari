@@ -11,38 +11,36 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
-    <div class="container-md py-3 text-center bg-light">
-        <div class="row bg-info py-3">
-            <h4>Inserisci una parola</h4>
-            <div class="col-4 offset-3">
+<body class="mybg-color">
+    <div class="container-md bg-light py-3 text-center rounded-top">
+        <div class="row py-3">
+            <h4>Inserisci una parola e scopri se è palindroma</h4>
+            <div class="col-8 m-auto d-flex justify-content-center">
                 <input type="text">
+                <div class="wrapper"></div>
                 
             </div>
-            <div class="col-2 ">
-                <!-- <span>QUI SCRIVO SE è PALINDROMA</span> -->
-                <div class="wrapper"></div>
-            </div>
+            
         </div>
     </div>
-    <div class="container-md bg-secondary text-center">
-        <div class="row justify-content-center py-3">
-            <div class="col-6 bg-white">
+    <div class="container-md text-center bg-light py-3">
+        <div class="row justify-content-center py-3 bg-light">
+            <div class="col-8 text-center">
             
                 <label for="pari-dispari">Sciegli pari o dispari</label>
 
-                <select id="pari-dispari" class="form-select my-3" aria-label="Default select example">
-                    <option value="pari">pari</option>
-                    <option value="dispari">dispari</option>
+                <select id="pari-dispari" class="form-select my-2 m-auto" aria-label="Default select example">
+                    <option value="pari" class="text-center">pari</option>
+                    <option value="dispari" class="text-center">dispari</option>
                 </select>
-                <label for="numero-utente">Inserisci un numero da 1 a 5</label>
+                <label for="numero-utente">Inserisci un numero da 1 a 5</label><br>
                 <input type="number" id="numero-utente" min="1" max="5" class="mb-3">
-                <button class="btn btn-info">Invia</button>
+                <button type="submit" class="btn btn-info">Invia</button>
                 
             </div>
-            <div class="col bg-gradient d-flex">
-                <div id="risultato" class="m-auto display-2 txt-bg"></div>
-            </div>
+        </div>
+        <div class="text-center d-flex">
+            <div id="risultato" class="m-auto display-2 "></div>
         </div>
     </div>
     <script src="js/script.js"></script>

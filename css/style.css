@@ -1,16 +1,20 @@
-body {
-    background-color: bisque;
+/* body {
+    background-image: linear-gradient(rgb(109, 79, 122), rgb(124, 126, 226));
+} */
+.mybg-color{
+    background-image: linear-gradient(rgb(87, 152, 164), rgb(84, 85, 125));
+    background-attachment: fixed;
+    background-position: center;
 }
-
 .wrapper {
     min-width: 100px;
-    height: 100%;
+    min-height: 100%;
     background-color: beige;
     border: 1px solid lightgray;
-    border-radius: 5PX;
+    border-radius: 5px;
 }
-select.pari-dispari {
-    width: 50%;
+select#pari-dispari {
+    max-width: 200px;
 }
 span {
     display: block;

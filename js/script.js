@@ -26,12 +26,14 @@ inputUtente.addEventListener('change', function() {
 // funzione che somma due valori
 const btn = document.getElementsByTagName('button')[0];
 const selection = document.getElementsByTagName('select')[0];
+console.log(selection);
+console.log(selection[0].value)
 const numeroUtente = document.getElementById('numero-utente');
 const risultato = document.getElementById('risultato');
 
 btn.addEventListener('click', function() {
     let numeroInserito = parseInt(numeroUtente.value);
-    let scieltaUtente = selection.value;
+    let scieltaUtente = String(selection.value);
     console.log(scieltaUtente,numeroInserito);
 
     let numeroComputer = numeroRandom(1,5);
@@ -39,8 +41,20 @@ btn.addEventListener('click', function() {
 
     let somma = numeroInserito + numeroComputer;
     console.log(numeroInserito + ' + ' + numeroComputer + ' = ' + somma)
-
-  if((isEven(somma) && scieltaUtente === 'pari') || (isEven(!somma) && scieltaUtente === 'dispari')) {
+    let check = false;
+  if(isEven(somma) && (scieltaUtente === "pari")){
+    check = true;
+  }
+  else if (!(isEven(somma)) && (scieltaUtente === "dispari")) {
+    check = true;
+  } else {
+    check = false;
+  }
+  
+  
+  console.log(!(isEven(somma)),scieltaUtente);
+  
+  if (check){
     console.log('hai vinto');
     risultato.innerHTML = '<span class="text-bg-success">hai vinto</span>';
   } else {
